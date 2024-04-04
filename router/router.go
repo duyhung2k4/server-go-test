@@ -1,7 +1,6 @@
 package router
 
 import (
-	"app/config"
 	"log"
 	"net/http"
 
@@ -36,7 +35,7 @@ func Router() http.Handler {
 		})
 	})
 
-	log.Println(config.GetHost() + ":8080")
+	log.Println(":8080")
 
 	return app
 }
