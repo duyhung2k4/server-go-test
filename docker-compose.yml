@@ -2,8 +2,12 @@ version: '3.8'
 
 services:
   server-test:
+    container_name: server-test-container
+    image: server-test:v1
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+    stdin_open: true
+    tty: true
